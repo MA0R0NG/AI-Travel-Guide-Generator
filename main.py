@@ -1,5 +1,5 @@
 import streamlit as st
-from datetime import date
+from datetime import date, timedelta
 from utils import generate_travel_guide
 
 banner_image_path = 'banner.png'
@@ -18,8 +18,11 @@ location = st.text_input("📍 Enter the travel location")
 col1, col2 = st.columns(2)
 with col1:
     start_date = st.date_input("🛫 Start Date of Travel", min_value=date.today())
+
 with col2:
-    end_date = st.date_input("🛬 End Date of Travel", min_value=start_date)
+    # 设置end_date的默认值为start_date之后的一天
+    default_end_date = max(start_date + timedelta(days=1), date.today())
+    end_date = st.date_input("🛬 End Date of Travel", min_value=start_date, value=default_end_date)
 
 # Calculate the duration based on the start and end dates
 duration = (end_date - start_date).days  # This will give the duration in days
