@@ -3,7 +3,6 @@ from langchain_openai import ChatOpenAI
 from langchain_community.utilities import WikipediaAPIWrapper
 
 def generate_travel_guide(location, duration, budget, special_preferences, api_key):
-     os.environ["OPENAI_API_BASE"] = "https://api.gptsapi.net/v1"
     # Crafting the prompt for the travel guide
     days_itinerary = "\n".join([f"Day {i + 1}:" for i in range(duration)])
 
