@@ -8,9 +8,7 @@ st.title("🌍 Travel Guide Generator")
 
 st.image(banner_image_path, use_column_width=True)
 
-with st.sidebar:
-    openai_api_key = st.text_input("Enter OpenAI API Key:", type="password")
-    st.markdown("[Get OpenAI API Key](https://platform.openai.com/account/api-keys)")
+openai_api_key = "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" 
 
 location = st.text_input("📍 Enter the travel location")
 
