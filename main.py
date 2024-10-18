@@ -8,7 +8,7 @@ st.title("🌍 Travel Guide Generator")
 
 st.image(banner_image_path, use_column_width=True)
 
-openai_api_key = "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" 
+openai_api_key = "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" 
 
 location = st.text_input("📍 Enter the travel location")
 
