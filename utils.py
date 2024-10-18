@@ -47,8 +47,3 @@ def generate_travel_guide(location, duration, budget, special_preferences, api_k
 
     # Return the travel guide response and Wikipedia search result separately
     return travel_guide_response, cleaned_wikipedia_info
-
-
-
-
-#print(generate_script("sora模型", 1, 0.7, os.getenv("OPENAI_API_KEY")))
